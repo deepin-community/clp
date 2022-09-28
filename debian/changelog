@@ -1,0 +1,288 @@
+clp (1.17.5+repack1-1) unstable; urgency=medium
+
+  * QA upload.
+  * New upstream version 1.17.5+repack1
+  * Update Standards-Version to 4.5.0
+  * Changes to include BuildTools in source, so we can make use of
+    autoreconf during build.
+    - Change URI in d/watch
+    - Add folders to Files-Excluded in d/copyright
+    - Update path in d/coinor-libclp-doc.examples
+    - Change path in autopkgtest files
+    - Remove without autoreconf and add override_dh_autoreconf in d/rules
+  * Change example file in d/test/check2
+  * Update required version for runtime and build-dependencies.
+  * Set upstream metadata fields: Bug-Database, Repository, Repository-Browse.
+    Update: Bug-Submit
+  * Remove patch, partly implemented upstream.
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Mon, 17 Feb 2020 18:45:32 +0100
+
+clp (1.17.3+repack1-2) unstable; urgency=medium
+
+  * QA upload
+  * Add coinor-libclp-doc.links to remove duplicated files
+  * Set minimum version on runtime-dependencies
+  * Add 0001-check-for-correct-architecture.patch
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Sat, 28 Dec 2019 10:27:15 +0100
+
+clp (1.17.3+repack1-1) unstable; urgency=medium
+
+  * QA upload
+  [ Debian Janitor ]
+  * Drop use of autotools-dev debhelper.
+  * Update standards version to 4.4.1, no changes needed.
+  * Set upstream metadata fields: Bug-Submit.
+
+  [ Håvard Flaget Aasen ]
+  * New upstream version 1.17.3+repack1
+  * Update debian/watch.
+    - Use secure URI
+    - App 'repack' to dversionmangle
+  * Change from debian/compat to debhelper-compat
+  * Update debian/control.
+    - Drop autotools-dev
+    - Update required version for build-dependencies.
+  * Update debian/coinor-libclp-dev.install
+    - Shorten paths
+    - Remove usr/share/coin
+  * Update debian/coinor-libclp1-lintian-overrides
+  * Use the source created jquery.js file
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Sun, 22 Dec 2019 17:16:03 +0100
+
+clp (1.16.11+repack1-2) unstable; urgency=medium
+
+  * QA upload
+
+  [ Jelmer Vernooĳ ]
+  * [e8b30cc] Remove unnecessary 'Testsuite: autopkgtest' header.
+  * [e29ea36] Trim trailing whitespace.
+  * [462e236] Change priority extra to priority optional.
+
+  [ Anton Gladky ]
+  * [6aa6d7f] Trim trailing whitespace.
+  * [2796ff2] Orphan the package.
+  * [8dcd3f8] Update changelog.
+  * [2ea8ae1] control: update Vcs-Browser and Vcs-Git.
+  * [99ed221] Set Standards-Version: 4.3.0.
+
+ -- Anton Gladky <gladk@debian.org>  Wed, 07 Aug 2019 19:20:53 +0200
+
+clp (1.16.11+repack1-1) unstable; urgency=medium
+
+  * Upload into unstable.
+
+ -- Anton Gladky <gladk@debian.org>  Mon, 21 Aug 2017 21:27:41 +0200
+
+clp (1.16.11+repack1-1~exp1) experimental; urgency=medium
+
+  * [f72904a] Set Standards-Version: 4.0.0
+  * [5b4ca49] Update minimal package versions in depends.
+  * [e522098] New upstream version 1.16.11+repack1
+
+ -- Anton Gladky <gladk@debian.org>  Sun, 20 Aug 2017 20:45:13 +0200
+
+clp (1.16.10+repack1-1~exp1) experimental; urgency=medium
+
+  * [7bf317e] Update d/watch.
+  * [5fb4c33] Update d/copyright, exlclude not needed files.
+  * [97737d7] Update versioned build-depends.
+  * [07978c6] Update file, applied by upstream.
+  * [f268fc3] Remove Miles Lubin from uploaders. (Closes: #862815)
+  * [19364d4] New upstream version 1.16.10+repack1
+  * [a14cf54] Switch to compat-level 10.
+  * [6de2985] Use maximal hardening options.
+
+ -- Anton Gladky <gladk@debian.org>  Sat, 03 Jun 2017 22:23:57 +0200
+
+clp (1.15.10-3) unstable; urgency=medium
+
+  * [28ec8b3] Fix dependency in autopkgtest.
+
+ -- Anton Gladky <gladk@debian.org>  Tue, 06 Sep 2016 21:56:14 +0200
+
+clp (1.15.10-2) unstable; urgency=medium
+
+  * [2190ad2] Drop dbg-package.
+  * [77a5863] Minor fixes in d/rules.
+  * [88e2060] Apply cme fix dpkg.
+  * [9646d4f] Add autopkgtest.
+  * [e01dbc7] Add myself as uploader.
+
+ -- Anton Gladky <gladk@debian.org>  Tue, 06 Sep 2016 19:55:14 +0200
+
+clp (1.15.10-1) unstable; urgency=low
+
+  * New upstream version.
+  * Use dh_autotools-dev to update config.{sub,guess} for new ports.
+    - Thanks to Adam Conrad
+  * Remove shlibdeps patch incorporated upstream with configure option
+
+ -- Miles Lubin <miles.lubin@gmail.com>  Wed, 03 Sep 2014 16:51:30 -0400
+
+clp (1.15.5-1) unstable; urgency=low
+
+  * Move manpage to coinor-clp (Closes: #729778)
+  * New upstream version.
+  * Switch to upstream's packager-friendly tarballs.
+  * Bump standards version (no changes needed).
+  * Upload to unstable for transition.
+
+ -- Miles Lubin <miles.lubin@gmail.com>  Wed, 27 Nov 2013 23:22:19 -0500
+
+clp (1.15.3-2) experimental; urgency=low
+
+  * Put clp executable in separate package: coinor-clp
+    - Mark Breaks+Replaces coinor-libclp0 (Closes: #726720).
+
+ -- Miles Lubin <miles.lubin@gmail.com>  Fri, 18 Oct 2013 08:26:26 -0400
+
+clp (1.15.3-1) experimental; urgency=low
+
+  * New upstream release (Closes: #669371)
+    - License changed to EPL.
+    - SONAME version is now 1.
+    - OsiClp interface now provided by this package.
+  * New maintainer (Closes: #645081)
+    - Previous maintainer refused to relicense work under EPL.
+  * Bump to compat 9 (libraries now installed to multiarch dirs.).
+  * Remove outdated patches.
+  * Add patch to fix building with pkg-config.
+  * Add patch to fix shared library dependencies.
+    - libOsiClp still has unrecorded dependency on libClp
+  * Remove .la files.
+  * Bump standards version.
+    - Updated copyright file to machine-readable format.
+
+ -- Miles Lubin <miles.lubin@gmail.com>  Fri, 04 Oct 2013 21:24:10 -0400
+
+clp (1.12.0-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix "FTBFS: CbcOrClpParam.cpp:1078:43: error: format not a string
+    literal and no format arguments [-Werror=format-security]":
+    add patch format-security.patch from Wolfram Sang.
+    (Closes: #643363)
+  * Move dependency_libs removal to correct package's target, change path and
+    set it to the empty string.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 21 Dec 2011 20:07:53 +0100
+
+clp (1.12.0-2) unstable; urgency=low
+
+  * Blacklist some generated doxygen files not whitelist (Closes: #591175).
+  * Empty dependency_libs in .la file and bump standards version to 3.9.1.0.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Sat, 10 Jul 2010 09:08:46 +0200
+
+clp (1.12.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - Refreshed patches.
+    - Bump Standards version (no changes required).
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Sat, 10 Jul 2010 09:01:32 +0200
+
+clp (1.11.1-2) unstable; urgency=low
+
+  * Make -dev package depend on coinor-libcoinutils-dev (Closes: #578579)
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Fri, 23 Apr 2010 08:04:03 +0200
+
+clp (1.11.1-1) unstable; urgency=low
+
+  * New upstream release.
+    - Switch to dpkg-source 3.0 (quilt) format.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Sun, 11 Apr 2010 09:14:40 +0200
+
+clp (1.11.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - Build depend on coinutils version >=2.6.0-2 (Closes: #571384)
+  * Bump Standards version (no changes required).
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Sat, 27 Feb 2010 23:26:23 +0100
+
+clp (1.10.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Refreshed patches.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Wed, 14 Oct 2009 07:18:35 +0200
+
+clp (1.10.1-1) unstable; urgency=low
+
+  [ Torsten Werner ]
+  * Remove myself from Uploaders as discussed with Sören.
+
+  [ Aramian Wasielak ]
+  * New upstream release.
+  * Refreshed patches.
+  * debian/control:
+    - Bump Standards version (no changes required).
+
+ -- Aramian Wasielak <aramian.wasielak@gmail.com>  Thu, 03 Sep 2009 17:40:21 -0700
+
+clp (1.10.0-1) unstable; urgency=low
+
+  [ Soeren Sonnenburg ]
+  * New upstream version.
+  * Move -dbg package to section debug.
+  * Build depend on coinutils 2.5
+
+  [ Aramian Wasielak ]
+  * debian/control:
+    - Remove ghostscript and texlive-latex-base from Build-Depends.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Thu, 09 Apr 2009 19:53:54 +0200
+
+clp (1.9.0-1) unstable; urgency=low
+
+  [ Aramian Wasielak ]
+  * debian/control: Fix section override disparity.
+  * Add lintian override.
+  * debian/rules (clean): Remove generated doxydoc/html.
+  * Update my email address to aramian.wasielak@gmail.com.
+
+  [ Soeren Sonnenburg ]
+  * New upstream version, requires coinor-coinutils 2.4.0
+  * Add ${misc:Depends} to all package dependencies.
+  * Also install ClpDualSimplex.hpp.
+  * Refresh patches.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Thu, 12 Feb 2009 08:40:18 +0100
+
+clp (1.8.2-2) unstable; urgency=low
+
+  * Fixed Vcs-Svn and Vcs-Browser fields.
+  * Small fixes in clp.1.
+  * Fixed a typo in copyright.
+
+ -- Aramian Wasielak <aramian.wasielak@gmail.com>  Wed, 24 Sep 2008 23:19:16 +0200
+
+clp (1.8.2-1) unstable; urgency=low
+
+  * New upstream version.
+  * Update my email address to sonne@debian.org.
+  * Prefix packages with coinor- to distinguish them from coin3d and to
+    underline that they are part of the coin-or project.
+  * Introduce README.source and patch target to make package compliant to
+    standards version 3.8.0.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Wed, 24 Sep 2008 21:44:16 +0200
+
+clp (1.8.0-1) unstable; urgency=low
+
+  * new upstream release
+  * Reformat debian/copyright.
+
+ -- Torsten Werner <twerner@debian.org>  Sat, 26 Jul 2008 19:16:39 +0200
+
+clp (1.7.4-1) unstable; urgency=low
+
+  * Initial Release  (Closes: #479882)
+
+ -- Soeren Sonnenburg <debian@nn7.de>  Fri, 23 May 2008 16:09:47 +0200

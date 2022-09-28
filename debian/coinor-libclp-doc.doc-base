@@ -1,0 +1,9 @@
+Document: clp
+Title: clp API documentation
+Author: John J. Forrest
+Abstract: Doxygen-generated API documentation for clp.
+Section: Science/Mathematics
+
+Format: HTML
+Index: /usr/share/doc/coinor-libclp-doc/html/index.html
+Files: /usr/share/doc/coinor-libclp-doc/html/*.html

@@ -1,0 +1,21 @@
+#!/bin/sh
+# autopkgtest check for clp
+# (C) 2016 Anton Gladky <gladk@debian.org>
+
+set -e
+
+WORKDIR=$(mktemp -d)
+SRC=driver2.cpp
+trap "rm -rf $WORKDIR" 0 INT QUIT ABRT PIPE TERM
+cp Clp/examples/$SRC $WORKDIR/ 
+cp Clp/examples/hello.mps $WORKDIR/ 
+
+cd $WORKDIR
+
+g++ $SRC -lClp -lCoinUtils  -I/usr/include/coin -o demo
+echo "build: OK"
+
+./demo hello.mps
+ls -ln
+
+echo "run: OK"

@@ -1,0 +1,3 @@
+test/*.mps.gz
+test/*.out.gz
+test/*.lp

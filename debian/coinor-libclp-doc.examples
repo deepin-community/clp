@@ -1,0 +1,7 @@
+Clp/examples/*.c
+Clp/examples/*.cpp
+Clp/examples/*.tiny
+Clp/examples/Makefile
+Clp/examples/INSTALL
+Clp/examples/input.130
+Clp/examples/hello.mps

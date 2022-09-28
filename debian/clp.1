@@ -1,0 +1,71 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH CLP 1 "May  7, 2008"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+clp \- linear program solver
+.SH SYNOPSIS
+.B clp
+.RI
+filename
+[
+options
+]
+solutionfile
+.br
+.SH DESCRIPTION
+This manual page documents briefly the
+.B clp
+command.
+.PP
+.\" TeX users may be more comfortable with the \fB<whatever>\fP and
+.\" \fI<whatever>\fP escape sequences to invode bold face and italics, 
+.\" respectively.
+\fBclp\fP -- interface to the coin linear programming solver. \fBclp\fP
+solves the following linear optimization program:
+
+    minimize      c^t x
+    such that:    row_lb <= Ax <= row_ub
+                  column_lb <= x <= column_ub
+
+.SH OPTIONS
+When no options are given clp enters the interactive command line mode.
+Otherwise the program enters a batch mode, for which a summary of options is
+included below.  For a complete description, see 
+.B /usr/share/doc/coinor-libclp-doc.
+.TP
+.B \-help
+Show summary of options.
+.TP
+.B \-primalsimplex
+solve the problem using the primal simplex method
+.TP
+.B \-dualsimplex
+solve the problem using the dual simplex method
+.TP
+.B \-maximize
+maximize the problem
+.br
+.SH SEE ALSO
+.BR glpsol (1), dsdp5 (1)
+.PP
+This program is fully documented in the accompanying html documentation which
+can be found in \fB/usr/share/doc/coinor\-libclp\-doc\fP if the coinor\-libclp\-doc package is installed.
+.SH AUTHOR
+clp was written by John J. Forrest <jjforre@us.ibm.com> et.al.
+.PP
+This manual page was written by Soeren Sonnenburg <sonne@debian.org>,
+for the Debian project (but may be used by others).
